@@ -15,9 +15,7 @@ class ListAllUsersController {
 
       return response.json(users);
     } catch (err) {
-      return response
-        .status(400)
-        .json({ error: "User is not a admin or does not exist" });
+      return response.status(400).json({ error: err.message });
     }
   }
 }
